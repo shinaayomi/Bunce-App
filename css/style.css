@@ -27,6 +27,10 @@ select {
 
 /* Side Dashboard */
 
+.dashboard-height {
+    height: 100vh;
+}
+
 .side-dashboard {
     background: #24366B;
     overflow-x: hidden;
