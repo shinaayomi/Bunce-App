@@ -48,7 +48,7 @@ select {
     font-weight: 600;
     color: #C4C4C4;
     white-space: nowrap;
-    padding: 0 30px;
+    padding: 0 60px;
 }
 
 .side-dashboard .nav-link {
@@ -56,7 +56,7 @@ select {
     font-weight: 500;
     color: #FFFFFF;
     white-space: nowrap;
-    padding-left: 30px;
+    padding-left: 60px;
 }
 
 .side-dashboard li.nav-item:hover {
@@ -65,19 +65,6 @@ select {
 
 .side-dashboard .nav-link:hover {
     background: rgba(0, 102, 255, 0.42);
-}
-
-
-/* Body Dashboard */
-
-.purpleText {
-    color: #24366B;
-    font-weight: 500;
-}
-
-.dashboard-body {
-    background: #E5E5E5;
-    height: calc(100% - 80px);
 }
 
 
@@ -130,6 +117,20 @@ select {
 }
 
 
+/* Dashboard Body */
+
+.purpleText {
+    color: #24366B;
+    font-weight: 500;
+}
+
+.dashboard-body {
+    background: #E5E5E5;
+    height: calc(100% - 80px);
+    padding-right: 150px !important;
+}
+
+
 /* Dashboard Account Content */
 
 .account-content {
@@ -171,8 +172,8 @@ select {
     position: absolute;
     top: 3px;
     left: 0;
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     border: 2px solid #C4C4C4;
     background-color: #eee;
     border-radius: 50%;
@@ -183,7 +184,9 @@ select {
 }
 
 .account-checkbox input:checked~.checkmark {
-    background-color: #2196F3;
+    background: #4C94FF;
+    border: 3px solid #4C94FF;
+    box-sizing: border-box;
 }
 
 .checkmark:after {
@@ -194,15 +197,20 @@ select {
 
 .account-checkbox .checkmark:after {
     display: block;
-    left: 9px;
-    top: 4px;
-    width: 8px;
-    height: 15px;
+    left: 7px;
+    top: 2px;
+    width: 6px;
+    height: 13px;
     border: solid #C4C4C4;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.account-checkbox input:checked~.checkmark:after {
+    border: solid #FFFFFF;
+    border-width: 0 2px 2px 0;
 }
 
 .account-checkbox .badge {
@@ -211,7 +219,7 @@ select {
     font-size: 10px;
 }
 
-.dashboard-body .disable {
+.disable {
     opacity: 0.6;
 }
 
@@ -222,4 +230,8 @@ select {
     font-weight: 500;
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .dashboard-body {
+        padding-right: 16px !important;
+    }
+}
