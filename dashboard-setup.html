@@ -16,13 +16,13 @@
             <!--Dashboard-->
             <div class="col-md-2 px-0 side-dashboard">
                 <nav class="navbar navbar-expand-lg navbar-light flex-md-column px-md-0">
-                    <a class="navbar-brand ml-md-3 px-4" href="#">Bunce technology<img src="/icon/iconfinder_list.svg" class="img-fluid"></a>
+                    <a class="navbar-brand ml-md-3 px-4" href="#">Company Name<img src="/icon/iconfinder_list.svg" class="img-fluid"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 											<span class="navbar-toggler-icon"></span>
 										</button>
 
                     <div class="collapse navbar-collapse flex-column align-items-md-stretch w-100" id="navbarSupportedContent">
-                        <ul class="nav flex-column ml-auto ml-md-0 my-4">
+                        <ul class="nav flex-column ml-auto ml-md-0 my-4 py-2">
                             <li class="nav-item">
                                 <a href="#" class="nav-link"><img src="/icon/iconfinder_Blocks.svg" width="18" alt="">&nbsp; Account Setup</a>
                             </li>
@@ -31,7 +31,7 @@
                             </li>
                         </ul>
 
-                        <ul class="nav flex-column mb-2">
+                        <ul class="nav flex-column mb-3">
                             <li class="title">CAMPAIGNS</li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><img src="/icon/iconfinder_create.svg" width="20" alt=""> Create</a>
@@ -53,14 +53,14 @@
                                 <a class="nav-link" href="#"><img src="/icon/iconfinder_credit_card.svg" width="18" alt=""> Transcations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><img src="/icon/fg-removebg-preview.svg" width="18" alt=""> Retries</a>
+                                <a class="nav-link" href="#"><img src="/icon/fg-removebg-preview.svg" width="18" alt=""> Failed</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><img src="/icon/calendar-removebg-preview.svg" width="18" alt=""> Upcoming</a>
                             </li>
                         </ul>
 
-                        <ul class="nav flex-column my-2">
+                        <ul class="nav flex-column my-3">
                             <li class="title">PAYMENT PAGES</li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><img src="/icon/iconfinder_create.svg" width="20" alt=""> Create</a>
@@ -125,7 +125,7 @@
                         <p class="range-text">To start your recovery process, please connect your payment gateway, email provider and create your first campaign</p>
                     </div>
 
-                    <div class="container-fluid mt-3 account-details">
+                    <div class="container-fluid mt-3 account-details border-bottom-0">
                         <div class="row">
                             <div class="col-10 pl-0">
                                 <label for="account" class="account-checkbox purpleText">
@@ -136,9 +136,38 @@
                                 <p class="account-paragraph">Connect your payment gateway to recieve payment events.</p>
                             </div>
                             <div class="col-2 pl-0 d-flex justify-content-end align-items-center">
-                                <img src="/icon/right-pointer.svg" width="14" alt="">
+                                <button class="btn bg-transparent"><img src="/icon/downNav.svg" width="25" alt=""></button>
                             </div>
                         </div>
+
+                        <div class="row row-cols-1 row-cols-md-3 pl-md-2 mt-3 mt-md-0">
+                            <div class="col-md-5 mb-4 p-md-4">
+                                <div class="card payment-card h-100">
+                                    <div class="card-body">
+                                        <img src="/icon/paystack-logo-vector-removebg-preview 2.svg" width="200" class="img-fluid" alt="...">
+                                        <p class="pl-1 mb-0 mt-2"><button class="btn btn-primary">connect</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4 p-md-4">
+                                <div class="card payment-card h-100">
+                                    <div class="card-body">
+                                        <img src="/icon/flutter.svg" width="200" class="img-fluid" alt="...">
+                                        <p class="pl-2 mb-0 mt-2"><button class="btn btn-primary">connect</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-4 px-md-4">
+                                <div class="card payment-card h-100">
+                                    <div class="card-body">
+                                        <img src="/icon/stripe 2.svg" width="150" class="img-fluid" alt="...">
+                                        <p class="mb-0 mt-2"><button class="btn disabled-btn">Coming soon</button></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p class="account-paragraph pl-md-3">Didn’t find your payment gateway ? let us know <span class="text-primary">here</span></p>
                     </div>
 
                 </div>
