@@ -170,7 +170,7 @@ select {
 
 .checkmark {
     position: absolute;
-    top: 3px;
+    top: 5px;
     left: 0;
     height: 25px;
     width: 25px;
@@ -198,7 +198,7 @@ select {
 .account-checkbox .checkmark:after {
     display: block;
     left: 7px;
-    top: 2px;
+    top: 3px;
     width: 6px;
     height: 13px;
     border: solid #C4C4C4;
@@ -241,6 +241,13 @@ select {
 .disabled-btn {
     color: #FCFCFD;
     background: rgba(64, 91, 168, 0.35);
+}
+
+
+/* Selects */
+
+.bunce-select {
+    background: url("/icon/down-pointer.svg") no-repeat right .75rem center;
 }
 
 @media screen and (max-width: 768px) {

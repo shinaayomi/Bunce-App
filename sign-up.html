@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Sans">
+</head>
+
+<body>
+
+    <div class="container px-md-5">
+        <nav class="nav px-md-5 pt-3"><img src="/img/Bunce.svg" class="img-fluid" width="100" alt=""></nav>
+
+        <form class="needs-validation w-75 mx-auto my-5 px-md-5" novalidate>
+            <h4 class="purpleText font-weight-bold">Hello, <img src="/icon/Hello.svg" class="img-fluid" width="20" alt=""></h4>
+            <p class="purpleText">Welcome to Bunce, let’s get you started by creating your account</p>
+
+            <div class="form-row">
+                <div class="col-md-6 my-3 pr-md-3">
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+                    <div class="invalid-feedback">
+                        Please enter your first name
+                    </div>
+                </div>
+                <div class="col-md-6 my-3 pl-md-3">
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                    <div class="invalid-feedback">
+                        Please enter your last name
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 my-3 pr-md-3">
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="Business name" required>
+                    <div class="invalid-feedback">
+                        Please enter your business name
+                    </div>
+                </div>
+                <div class="col-md-6 my-3 pl-md-3">
+                    <input type="email" class="form-control" id="validationCustom04" placeholder="Work email" required>
+                    <div class="invalid-feedback">
+                        Please enter your work email
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 my-3 pr-md-3">
+                    <input type="password" class="form-control" id="validationCustom05" placeholder="Password" required>
+                    <div class="invalid-feedback">
+                        You must enter a password
+                    </div>
+                </div>
+                <div class="col-md-6 my-3 pl-md-3">
+                    <input type="password" class="form-control" id="validationCustom06" placeholder="Confirm password" required>
+                    <div class="invalid-feedback">
+                        You must reconfirm password
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary mt-3 w-100" type="submit">Next</button>
+        </form>
+
+        <p class="text-center purpleText">Already have an account? <a href="#" class="nav-link d-inline p-0">Log in</a></p>
+        <p class="text-center purpleText">By clicking on next, you have read and agreed to<br /> Bunce’s <a href="#" class="nav-link d-inline p-0">Privacy policy</a> and <a href="#" class="nav-link d-inline p-0">Terms of use</a></p>
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
+
+    </div>
+
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+
+
+
+</body>
+
+</html>

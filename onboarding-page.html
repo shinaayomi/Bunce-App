@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Sans">
+</head>
+
+<body>
+
+    <div class="container px-md-5">
+
+        <nav class="px-md-5 pt-3 purpleText">
+            <h5 class="mb-0">Setup your Bunce account</h5>
+            <p>Takes less than 10 minutes.</p>
+        </nav>
+
+        <div class="row justify-content-center pt-md-5">
+            <div class="col-md-7">
+
+                <form class="needs-validation w-75 mx-auto mb-4 px-md-2" novalidate>
+                    <h4 class="purpleText font-weight-bold">Hey Dami, tell us about your company</h4>
+                    <p class="purpleText">Please tell us a little about the type of business you run.</p>
+
+                    <!-- Selects -->
+                    <div class="my-4">
+                        <label for="" class="purpleText font-weight-bold">What type of company is Bunce?</label>
+                        <select class="custom-select bunce-select" required>
+                          <option value="">Choose company type</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        <div class="invalid-feedback">invalid custom select feedback</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="" class="purpleText font-weight-bold">What is your monthly revenue ?</label>
+                        <select class="custom-select bunce-select" required>
+                          <option value="">Choose monthly revenue</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        <div class="invalid-feedback">invalid custom select feedback</div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="" class="purpleText font-weight-bold">How many customers do you have ?</label>
+                        <select class="custom-select bunce-select" required>
+                          <option value="">Choose number of customers</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        <div class="invalid-feedback">invalid custom select feedback</div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="" class="purpleText font-weight-bold">What is your payment failure rate?</label>
+                        <select class="custom-select bunce-select" required>
+                          <option value="">Choose failure rate</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        <div class="invalid-feedback">invalid custom select feedback</div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="" class="purpleText font-weight-bold">What is your churn rate?</label>
+                        <select class="custom-select bunce-select" required>
+                          <option value="">Choose monthly revenue</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        <div class="invalid-feedback">invalid custom select feedback</div>
+                    </div>
+
+                    <button class="btn btn-primary mt-3 w-100" type="submit">Go to dashboard</button>
+                </form>
+
+
+                <script>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                    (function() {
+                        'use strict';
+                        window.addEventListener('load', function() {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function(form) {
+                                form.addEventListener('submit', function(event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+
+
+
+</body>
+
+</html>
