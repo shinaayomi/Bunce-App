@@ -80,14 +80,15 @@
 
             </div>
 
-            <!-- Dashboard Body -->
-            <div class="col-md-10 px-0">
-                <nav class="navbar navbar-expand-sm pb-3 pt-2">
+
+            <div class="col-md-10 px-0 dashboard-body-content">
+                <!-- Dashboard Body Nav -->
+                <nav class="navbar navbar-expand-sm pb-3 pt-2 dashboard-time">
                     <!-- Dropdown -->
                     <div class="navbar dropdown px-0 px-md-3">
-                        <a class="nav-link purpleText px-2 px-md-3" href="#" id="navbardrop" data-toggle="dropdown">
-													This Week <img src="/icon/down-pointer.svg" width="12" alt="">
-												</a>
+                        <a class="nav-link purpleText px-0 px-md-3" href="#" id="navbardrop" data-toggle="dropdown">
+									This Week <img src="/icon/down-pointer.svg" width="12" alt="">
+								</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Link 1</a>
                             <a class="dropdown-item" href="#">Link 2</a>
@@ -125,7 +126,8 @@
                         <p class="range-text">To start your recovery process, please connect your payment gateway, email provider and create your first campaign</p>
                     </div>
 
-                    <div class="container-fluid mt-3 account-details border-bottom-0">
+                    <!-- Add Payment Gateway -->
+                    <div class="container-fluid mt-3 account-details">
                         <div class="row">
                             <div class="col-10 pl-0">
                                 <label for="account" class="account-checkbox purpleText">
@@ -136,38 +138,260 @@
                                 <p class="account-paragraph">Connect your payment gateway to recieve payment events.</p>
                             </div>
                             <div class="col-2 pl-0 d-flex justify-content-end align-items-center">
-                                <button class="btn bg-transparent"><img src="/icon/downNav.svg" width="25" alt=""></button>
+                                <button class="btn bg-transparent" type="button" data-toggle="collapse" data-target="#collapseStack" aria-expanded="true" aria-controls="collapseOne">
+											  <img src="/icon/downNav.svg" width="25" alt="">
+											</button>
                             </div>
                         </div>
 
-                        <div class="row row-cols-1 row-cols-md-3 pl-md-2 mt-3 mt-md-0">
+                        <div class="row row-cols-1 row-cols-md-3 pl-md-2 mt-3 mt-md-0 collapse" id="collapseStack">
+                            <!-- Paystack card -->
                             <div class="col-md-5 mb-4 p-md-4">
                                 <div class="card payment-card h-100">
                                     <div class="card-body">
                                         <img src="/icon/paystack-logo-vector-removebg-preview 2.svg" width="200" class="img-fluid" alt="...">
-                                        <p class="pl-1 mb-0 mt-2"><button class="btn btn-primary">connect</button></p>
+                                        <p class="pl-1 mb-0 mt-2"><button class="btn btn-primary" data-toggle="modal" data-target="#payStack">connect</button></p>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Flutter card -->
                             <div class="col-md-5 mb-4 p-md-4">
                                 <div class="card payment-card h-100">
                                     <div class="card-body">
                                         <img src="/icon/flutter.svg" width="200" class="img-fluid" alt="...">
-                                        <p class="pl-1 mb-0 mt-2"><button class="btn btn-primary">connect</button></p>
+                                        <p class="pl-1 mb-0 mt-2"><button class="btn btn-primary" data-toggle="modal" data-target="#flutter">connect</button></p>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Strike card -->
                             <div class="col-md-5 mb-4 px-md-4">
                                 <div class="card payment-card h-100 pl-1">
                                     <div class="card-body">
                                         <img src="/icon/stripe 2.svg" width="120" class="img-fluid" alt="...">
-                                        <p class="mb-0 mt-3"><button class="btn disabled-btn">Coming soon</button></p>
+                                        <p class="mb-0 mt-3"><button class="btn disabled-btn" disabled="true">Coming soon</button></p>
                                     </div>
                                 </div>
                             </div>
-
+                            <p class="range-text pl-md-3">Didn’t find your payment gateway? let us know <a class="nav-link d-inline p-0" href="#">here</a></p>
                         </div>
-                        <p class="range-text pl-md-3">Didn’t find your payment gateway ? let us know <span class="text-primary">here</span></p>
+
+                        <!-- Paystack Modal -->
+                        <div class="modal fade" id="payStack" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <div class="modal-body">
+                                        <form class="needs-validation mx-auto my-5 w-75" novalidate>
+                                            <h4 class="purpleText font-weight-bold">Add your Paystack API key</h4>
+                                            <p class="purpleText">Copy your Paystack API Key and paste it in the field below</p>
+
+                                            <div class="my-3">
+                                                <input type="email" class="form-control" id="validationCustom01" placeholder="test key" required>
+                                            </div>
+
+                                            <div class="my-3">
+                                                <input type="password" class="form-control" id="validationCustom03" placeholder="live key" required>
+                                            </div>
+
+                                            <div class="my-3">
+                                                <input type="password" class="form-control" id="validationCustom03" placeholder="webhook url" required>
+                                            </div>
+
+                                            <button type="button" class="btn btn-primary">Connect</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Flutter Modal -->
+                        <div class="modal fade" id="flutter" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+
+                                <div class="modal-content">
+                                    <form class="needs-validation mx-auto my-5 w-75" novalidate>
+                                        <h4 class="purpleText font-weight-bold">Add your Flutterwave API key</h4>
+                                        <p class="purpleText">Copy your Flutterwave API Key and paste it in the field below</p>
+
+                                        <div class="my-3">
+                                            <input type="email" class="form-control" id="validationCustom01" placeholder="test key" required>
+                                        </div>
+
+                                        <div class="my-3">
+                                            <input type="password" class="form-control" id="validationCustom03" placeholder="live key" required>
+                                        </div>
+
+                                        <div class="my-3">
+                                            <input type="password" class="form-control" id="validationCustom03" placeholder="webhook url" required>
+                                        </div>
+
+                                        <button type="button" class="btn btn-primary">Connect</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Email Provider -->
+                    <div class="container-fluid mt-3 account-details">
+                        <div class="row">
+                            <div class="col-10 pl-0 ">
+                                <label for="account2" class="account-checkbox purpleText">
+                                    Add email provider
+                                    <input type="checkbox" name="account2" checked>
+                                    <span class="checkmark "></span>															
+                                </label>
+                                <p class="account-paragraph">Connect your email provider to enable messaging on Bunce.</p>
+                            </div>
+                            <div class="col-2 pl-0 d-flex justify-content-end align-items-center ">
+                                <button class="btn bg-transparent" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><img src="/icon/downNav.svg " width="25 " alt=" "></button>
+                            </div>
+                        </div>
+
+                        <div class="row row-cols-1 row-cols-md-3 pl-md-2 mt-3 mt-md-0 collapse" id="collapseOne">
+                            <!-- Mailchimp card -->
+                            <div class="col-md-5 mb-4 p-md-4 ">
+                                <div class="card payment-card h-100 ">
+                                    <div class="card-body ">
+                                        <img src="/icon/mailchimp.svg " width="150" class="img-fluid " alt="... ">
+                                        <p class="pl-1 mb-0 mt-2 "><button class="btn btn-primary " data-toggle="modal " data-target="#mailchimp">connect</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mailgun card -->
+                            <div class="col-md-5 mb-4 p-md-4 ">
+                                <div class="card payment-card h-100 ">
+                                    <div class="card-body ">
+                                        <img src="/icon/mailgun.svg " width="150" class="img-fluid " alt="... ">
+                                        <p class="pl-1 mb-0 mt-2 "><button class="btn btn-primary" type="button" data-toggle="modal" data-target="#mailgun">connect</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Twilio card -->
+                            <div class="col-md-5 mb-4 px-md-4 ">
+                                <div class="card payment-card h-100 ">
+                                    <div class="card-body ">
+                                        <img src="/icon/twilio.svg " width="130" class="img-fluid " alt="... ">
+                                        <p class="mb-0 mt-3 "><button class="btn btn-primary ">Connect</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Amazon Ses card -->
+                            <div class="col-md-5 mb-4 px-md-4 ">
+                                <div class="card payment-card h-100 ">
+                                    <div class="card-body ">
+                                        <img src="/icon/amazon ses.svg " width="180 " class="img-fluid " alt="... ">
+                                        <p class="mb-0 mt-3 "><button class="btn btn-primary ">Connect</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="range-text pl-md-4">Didn’t find your email provider? let us know <a class="nav-link d-inline p-0" href="#">here</a></p>
+                        </div>
+
+
+                        <!-- Mailchimp Modal -->
+                        <div class="modal fade " id="mailchimp" data-backdrop="static " data-keyboard="false " tabindex="-1 " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
+                            <div class="modal-dialog modal-dialog-centered ">
+                                <div class="modal-content ">
+
+                                    <div class="modal-body ">
+                                        <form class="needs-validation mx-auto my-5 w-75 " novalidate>
+                                            <h4 class="purpleText font-weight-bold ">Add your Paystack API key</h4>
+                                            <p class="purpleText ">Copy your Paystack API Key and paste it in the field below</p>
+
+                                            <div class="my-3 ">
+                                                <input type="email" class="form-control " id="validationCustom1" placeholder="test key " required>
+                                            </div>
+
+                                            <div class="my-3 ">
+                                                <input type="password" class="form-control " id="validationCustom3" placeholder="live key " required>
+                                            </div>
+
+                                            <div class="my-3 ">
+                                                <input type="password " class="form-control " id="validationCustom3" placeholder="webhook url " required>
+                                            </div>
+
+                                            <button type="button " class="btn btn-primary">Connect</button>
+                                            <button type="button " class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mailgun Modal -->
+                        <div class="modal fade" id="mailgun" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content ">
+                                    <form class="needs-validation mx-auto my-5 w-75 " novalidate>
+                                        <h4 class="purpleText font-weight-bold ">Add your Mailgun API key</h4>
+                                        <p class="purpleText ">Copy your Mailgun API Key and paste it in the field below</p>
+
+                                        <div class="my-3 ">
+                                            <input type="email " class="form-control " id="validationCustom01 " placeholder="test key " required>
+                                        </div>
+
+                                        <div class="my-3 ">
+                                            <input type="password " class="form-control " id="validationCustom03 " placeholder="live key " required>
+                                        </div>
+
+                                        <div class="my-3 ">
+                                            <input type="password " class="form-control " id="validationCustom03 " placeholder="webhook url " required>
+                                        </div>
+
+                                        <button type="button " class="btn btn-primary ">Connect</button>
+                                        <button type="button " class="btn btn-secondary " data-dismiss="modal ">Cancel</button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Payment Gateway -->
+                    <div class="container-fluid mt-3 account-details">
+                        <div class="row">
+                            <div class="col-10 pl-0 ">
+                                <label for="account2" class="account-checkbox purpleText">
+                                    Create Payment pages
+                                    <input type="checkbox" name="account2" checked>
+                                    <span class="checkmark "></span>															
+                                </label>
+                                <p class="account-paragraph">Create your payment pages to recover failed payments and update expired customer cards</p>
+                            </div>
+                            <div class="col-2 pl-0 d-flex justify-content-end align-items-center ">
+                                <button class="btn bg-transparent" type="button" data-toggle="collapse" data-target="#collapsePay" aria-expanded="true" aria-controls="collapseOne"><img src="/icon/downNav.svg " width="25 " alt=" "></button>
+                            </div>
+                        </div>
+
+                        <div class="pl-md-3 collapse" id="collapsePay">
+                            <button class="btn btn-primary mb-3" type="button" data-toggle="modal" data-target="#paymentPage">Create pages</button>
+                        </div>
+
+                        <!-- Payment Gateway Modal -->
+                        <div class="modal fade" id="paymentPage" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content ">
+                                    <form class="needs-validation mx-auto my-5 w-75 " novalidate>
+                                        <h4 class="purpleText font-weight-bold ">Request payment gateway</h4>
+                                        <p class="purpleText">Please let us know which payment gateway that you currently use and we will notify you once we integrate them</p>
+
+                                        <div class="my-3 ">
+                                            <input type="text " class="form-control " id="validationCustom01 " placeholder="Payment gateway" required>
+                                        </div>
+
+                                        <button type="button" class="btn btn-primary px-4">Add</button>
+                                        <button type="button" class="btn btn-secondary " data-dismiss="modal ">Cancel</button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -179,13 +403,13 @@
 
 
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/popper.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/theme.js"></script>
+    <script type="text/javascript " src="js/jquery.js "></script>
+    <script type="text/javascript " src="js/popper.js "></script>
+    <script type="text/javascript " src="js/bootstrap.min.js "></script>
+    <script type="text/javascript " src="js/theme.js "></script>
 
 
 
-</body>
+</body>-+
 
 </html>

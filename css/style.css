@@ -32,8 +32,15 @@ select {
 }
 
 .side-dashboard {
+    height: 100%;
     background: #24366B;
     overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
 }
 
 .side-dashboard .navbar-brand {
@@ -48,7 +55,7 @@ select {
     font-weight: 600;
     color: #C4C4C4;
     white-space: nowrap;
-    padding: 0 60px;
+    padding-left: 60px;
 }
 
 .side-dashboard .nav-link {
@@ -122,6 +129,17 @@ select {
 .purpleText {
     color: #24366B;
     font-weight: 500;
+}
+
+.dashboard-body-content {
+    margin-left: 16.666667%;
+}
+
+.dashboard-time {
+    background-color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .dashboard-body {
@@ -198,7 +216,7 @@ select {
 .account-checkbox .checkmark:after {
     display: block;
     left: 7px;
-    top: 3px;
+    top: 2px;
     width: 6px;
     height: 13px;
     border: solid #C4C4C4;
@@ -254,4 +272,14 @@ select {
     .dashboard-body {
         padding-right: 16px !important;
     }
+    .dashboard-body-content {
+        margin-left: auto;
+    }
+    .side-dashboard,
+    .dashboard-time {
+        position: static;
+    }
+}
+
+
 }
