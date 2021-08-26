@@ -231,10 +231,11 @@ select {
     border-width: 0 2px 2px 0;
 }
 
-.account-checkbox .badge {
+.comingSoon {
     background: rgba(64, 91, 168, 0.4);
     border-radius: 15px;
-    font-size: 10px;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .disable {
@@ -268,6 +269,59 @@ select {
     background: url("/icon/down-pointer.svg") no-repeat right .75rem center;
 }
 
+
+/* Campaign */
+
+.dark-gray {
+    color: #3F4F74;
+}
+
+.campaign-card {
+    background: #FCFCFD;
+    border: 2px solid #24366B;
+    border-radius: 10px;
+    height: 100%;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.campaign-active:focus,
+.campaign-active:active {
+    background: url("/icon/checked.svg") no-repeat top 2px right 10px !important;
+    background-size: 25px !important;
+    background: #FCFCFD;
+    border: 2px solid #4C94FF !important;
+    border-radius: 10px;
+}
+
+.campaign-btn {
+    color: #4C94FF;
+    background: rgba(129, 217, 252, 0.06);
+    border: 1px solid #4C94FF;
+    border-radius: 8px;
+}
+
+.campaign-broadcast {
+    overflow-x: auto;
+}
+
+
+/* Broadcast Table */
+
+.broadcast-table {
+    background: #FCFCFD;
+    border: 1px solid #E2DFDF;
+}
+
+.broadcast-table th {
+    border-bottom: 1px solid #E2DFDF;
+    font-weight: normal;
+}
+
+.broadcast-table td {
+    border: none;
+}
+
 @media screen and (max-width: 768px) {
     .dashboard-body {
         padding-right: 16px !important;
@@ -279,7 +333,4 @@ select {
     .dashboard-time {
         position: static;
     }
-}
-
-
 }

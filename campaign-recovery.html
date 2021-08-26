@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recovery-campaign</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Sans">
+</head>
+
+<body>
+
+    <nav class="navbar dark-gray px-md-5 py-md-3">
+        <div class="nav pl-md-3">
+            <a href="#" class="nav-link gray-text px-0">
+                <img src="/icon/back-nav.svg" alt="" width="17" class="img-fluid mr-1"> <span>Back</span>
+            </a>
+            <h5 class="mb-0 ml-md-3 py-2 font-weight-bold">Failed payment recovery campaign <img src="/icon/draw_edit_pencil_write_icon.svg" alt=""></h5>
+        </div>
+        <div class="nav py-2 pr-md-3">
+            <h5 class="mb-0 mr-2 font-weight-bold">Activate campaign</h5>
+            <input type="range" min="1" max="2" value="1" class="range-slider">
+        </div>
+    </nav>
+
+    <div class="container-fluid campaign-broadcast">
+        <div class="d-flex flex-row justify-content-between align-items-center px-md-5 p-3 flex-nowrap">
+            <label for="">Campaign trigger</label>
+            <div class="col-md-3 col-4">
+                <select class="custom-select bunce-select" required>
+                  <option value="">Failed payment</option>
+                  <option value="1">Insufficient funds</option>
+                  <option value="2">Card expired</option>
+                  <option value="3">Cart abandonment</option>
+                  <option value="4">Failed payment</option>
+                  <option value="5">Customer joins segment - User churn</option>
+                  <option value="6">Going to churn</option>
+                  <option value="7">Most likely to churn</option>
+                  <option value="8">Not likely to churn</option>
+               </select>
+            </div>
+            <label for="">Time delay</label>
+            <div class="col-md-1 col-2">
+                <input type="text" class="form-control" name="" id="">
+            </div>
+            <div class="col-md-2 col-3">
+                <select class="custom-select bunce-select" required>
+                 <option value="">Minutes</option>
+                 <option value="1">seconds</option>
+                 <option value="2">Mini seconds</option>
+               </select>
+            </div>
+            <button class="btn campaign-btn">Create automation</button>
+        </div>
+        <div class="px-md-5">
+            <button class="btn campaign-btn">Create new broadcast</button>
+        </div>
+
+        <!-- Table -->
+        <div class="px-md-5">
+            <table class="table broadcast-table my-4 my-md-5">
+                <tr class="px-md-5">
+                    <th>Broadcast title</th>
+                    <th>subject</th>
+                    <th>Channel</th>
+                    <th>Automation status</th>
+                    <th class="d-flex justify-content-end">Activate broadcast </th>
+                </tr>
+                <tr>
+                    <td>Sample email 1</td>
+                    <td>Purchase issues?</td>
+                    <td>Email</td>
+                    <td>Not yet automated</td>
+                    <td class="d-flex justify-content-end"><input type="range" min="1" max="2" value="1" class="range-slider">
+                        <a href="#"><img src="/icon/broadcast-menu.svg" class="img-fluid align-baseline ml-2" width="5"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sample email 2</td>
+                    <td>Purchase issues?</td>
+                    <td>Email</td>
+                    <td>Not yet automated</td>
+                    <td class="d-flex justify-content-end"><input type="range" min="1" max="2" value="1" class="range-slider">
+                        <a href="#"><img src="/icon/broadcast-menu.svg" class="img-fluid align-baseline ml-2" width="5"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sample email 3</td>
+                    <td>Purchase issues?</td>
+                    <td>Email</td>
+                    <td>Not yet automated</td>
+                    <td class="d-flex justify-content-end"><input type="range" min="1" max="2" value="1" class="range-slider">
+                        <a href="#"><img src="/icon/broadcast-menu.svg" class="img-fluid align-baseline ml-2" width="5"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+
+
+
+</body>
+
+</html>
